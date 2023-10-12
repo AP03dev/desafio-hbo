@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(
+      45deg,
+      #9b34ef 0%,
+      #490cb0 20%,
+      transparent 100%
+    );
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(
+      90deg,
+      #5516ba,
+      rgba(255, 0, 229, 0.5) 80%
+    );
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+  }
+
+body{
+   background-image: url(./assets/images/background-movies-series.png);
+   background-size: cover;
+   height: 100vh;
+   margin: 0;
+   padding: 0;
+   color: var(--text-color);
+   background-color: var(--primary-color);
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+nav{
+    width: 100%;
+    background: var(--nav-bg-color);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+nav img{
+    margin-left: 30px;
+}
+
+
+nav a{
+    color:var(--btn-link-bg-color);
+    font-size: .90rem;
+    font-weight: 700;
+    font-family: 'Raleway' ;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+nav .signup{
+    background-color: var(--tertiary-color);
+    padding: 6px 24px;
+    border-radius: 50px;
+}
+
+nav .signup:hover{
+    background-color: var(--text-color);
+    color: var(--btn-link-color);
+}
+
+.login{
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--form-bg-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px;
+    font-family: 'Raleway', sans-serif ;
+}
+
+.container{
+  margin: auto;
+  text-align: center;
+}
+
+.login-title{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+    font-family: 'Raleway', sans-serif ;
+}
+
+.login-label{
+  text-align: left;
+  font-family: 'Raleway', sans-serif ;
+  font-size: 1.2rem;
+}
+
+.login-field{
+    background: var(--form-field-bg-color);
+    border: var(--form-field-border);
+    border-radius: 8px;
+    color: var(--text-color);
+    padding: 16px;
+    font-size: 1.1rem;
+    font-family: 'Raleway', sans-serif ;
+}
+
+.login-field:invalid{
+  border: 1px solid red;
+}
+
+.login-actions{
+  margin-top: 24px;
+  text-align: left;
+}
+
+.button{
+    padding: 16px 40px;
+    background: var(--btn-bg-color-gradient);
+    border-radius: 500px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif ;
+    font-size: 1rem;
+}
+
+.button-gradient:hover{
+    background: transparent;
+    outline: 3px solid var(--secondary-color);
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+}
+
+.login-link{
+    color: var(--link-color);
+    text-decoration: none;
+    margin-left: 24px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif ;
+    font-size: 1.2rem;
+}
+
+.footer{
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.footer a{
+    padding: 20px;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    color: var(--link-color);
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1rem;
+}
+
+.footer a:hover{
+  transition: color .5s;
+  color: var(--text-color);
+}
+
+.text-small{
+    font-size: 0.85rem;
+    margin: 16px 0;
+    color: var(--link-color);
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+}
+
+.footer-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 80px;
+}
+
+/* Media Query */
+@media screen and (max-width: 480px) {
+  body {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  nav{
+    padding: 32px 24px;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+  }
+
+  nav .logo{
+    width: 50%;
+ }
+
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .content{
+    width: 90%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .content .login-label{
+    float: left;
+  }
+  .login-actions{
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    float: left;
+    gap: 20px;
+  }
+  .login-actions .login-link{
+    margin: 0 auto;
+  }
+  footer .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 5px;
+  }
+  .footer .text-small{
+   /* width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;*/
+    margin: 0 auto;
+  }
+  .footer .footer-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+}
+
